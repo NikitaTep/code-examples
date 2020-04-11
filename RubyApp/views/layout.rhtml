@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab8</title>
+    <link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body style="background-color: #e6e6e6">
+    <div class="top-bar" style="background-color: #f1f1f1"> 
+      <div class="top-bar-left"> 
+        <ul class="dropdown menu" data-dropdown-menu> 
+          <li class="menu-text">Navigation</li> 
+          <li><a class="button" href="/list_payments">Платежи</a></li>
+          <li><a class="button" href="/find_by_name">Найти платежи по имени</a></li>
+          <li><a class="button" href="/find_by_sum">Найти платежи по диапазону</a></li>
+          <li><form action="/sort" method="post"><input type="submit" class="button" value="Отсортировать список"></form></li>
+        </ul> 
+      </div> 
+    </div>
+  
+    
+    <%= yield %>
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

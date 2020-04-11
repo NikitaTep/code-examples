@@ -1,0 +1,19 @@
+require 'bundler/setup'
+require 'rubocop/rake_task'
+require 'rake/testtask'
+
+task default: :rubocop
+
+RuboCop::RakeTask.new
+
+desc 'Run integration tests'
+Rake::TestTask.new(:integration) do |test|
+  test.test_files = FileList['test/**/test_list_payments.rb']
+  test.warning = false
+  test.verbose = true
+end
+
+desc 'Run application in the development mode'
+task :run do
+  ruby 'application.rb'
+end

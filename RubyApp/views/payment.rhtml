@@ -1,0 +1,21 @@
+<br>
+<div class= "row">
+  <div class= "large-6 large-offset-2 columns">
+    <div class="callout primary">
+      <h3> Счет на имя: <%= @payment.name%> <%= @payment.surname%> <%= @payment.patron%></h3>
+      <p>Вид платежа: <%= @payment.type %></p>
+      <p>Счет: <%= @payment.debts%>  Уже оплачено: <%= @payment.amount_paid%></p>
+      <p>Итого к оплате: <%= @payment.debts - @payment.amount_paid%></p>
+    </div>
+  </div>
+</div>
+<div class= "row">
+  <div class= "large-3 columns text-right">
+    <a class="button" href="/list_payments?page=<%= @page%>">Назад</a>
+  </div>
+  <div class= "large-9 columns text-left">
+     <form action="/delete?payment_id=<%= @id %>" method="post">
+       <input type="submit" class="button" value="Оплатить">
+     </form>
+  </div>
+</div>

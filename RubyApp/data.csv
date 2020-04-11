@@ -1,0 +1,8 @@
+name,surname,patronymic,type,debts,amount_paid
+Ivan,Ivanov,Sergeevich,rent,110,80
+Ivan,Ivanov,Sergeevich,electric power,100,0
+Ivan,Ivanov,Sergeevich,telephone charges,120,0
+Sergey,Petrov,Vasilyevich,rent,100,40
+Sergey,Petrov,Vasilyevich,electric power,120,0
+Sergey,Petrov,Vasilyevich,telephone charges,90,10
+Artem,Smirnov,Andreevich,telephone charges,90,10

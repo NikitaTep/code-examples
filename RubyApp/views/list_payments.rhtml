@@ -1,0 +1,32 @@
+<div class="row">
+  <div class= "large-6 large-offset-3 columns">
+    <% @payments.each do |payment| %>
+      <div class="callout warning">
+        <div class="row">
+          <div class= "large-8 columns">
+            <p> Платеж: <%= payment[:data].name%> <%= payment[:data].surname%> <%= payment[:data].patron%></p>
+            <p> Вид платежа <%= payment[:data].type%> </p>
+            <p>К зачислению: <%= payment[:data].debts%> Зачисленно: <%= payment[:data].amount_paid%></p>
+          </div>
+          <div class="large-4 columns text-right">
+            <a class="button" href="list_payments/<%= payment[:index]%>">Оплатить</a>
+            <form action="/delete?payment_id=<%= payment[:index] %>" method="post">
+              <input type="submit" class="button" value="Удалить">
+            </form>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <p> <%= @messege %></p>
+    <div class="row">
+      <div class= "large-12 columns text-center">
+        <% @page_count.times do |page_number|  %>
+          <a class="button" href="list_payments?page=<%= page_number%>"> Страница <%= page_number + 1 %></a>
+        <% end %>
+      </div>
+      <div class= "large-12 columns text-center">
+        <a class="button" href="list_payments/new">Добавить новый платеж</a>
+      </div>
+    </div>
+  </div>
+</div>

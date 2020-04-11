@@ -1,0 +1,53 @@
+<div class="callout primary">
+  <form action="/list_payments" method="post">
+    <div class= "row">
+      <div class="medium-4 columns">
+        <label>Имя плательщика
+          <input type = "text" name="name">
+        </label>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="medium-4 columns">
+        <label>Фамилия
+          <input type = "text" name="surname">
+        </label>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="medium-4 columns">
+        <label>Отчество
+          <input type = "text" name="patron">
+        </label>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="medium-4 columns">
+        <select name='type'>
+          <option value='rent'>Rent</option>
+          <option value='electric power'>Electric power</option>
+          <option value='telephone charges'>Telephone charges</option>
+        </select>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="medium-4 columns">
+        <label>Сумма платежа
+          <input type = "number" name="debts">
+        </label>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="medium-4 columns">
+        <label>Внесенная сумма
+          <input type = "number" name="amount_paid">
+        </label>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="medium-12 columns text-left">
+        <input type="submit" class="button" value="Добавить">
+      </div>
+    </div>
+  </form>
+</div>
